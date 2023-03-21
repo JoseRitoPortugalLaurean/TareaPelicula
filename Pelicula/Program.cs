@@ -3,11 +3,15 @@ using System.Collections.Generic;
 
 namespace Pelicula
 {
-
+   
     public class Pelicula
     {
         //Campos
         private List<Actor> actores = new List<Actor>();
+        public string Título;
+        public int Año;
+        public string Director;
+        public string País;
 
         //Constructores
      
@@ -41,8 +45,6 @@ namespace Pelicula
 
     class Program
     {
-
-
         static void Main(string[] args)
         {
             Console.WriteLine("Hello");
