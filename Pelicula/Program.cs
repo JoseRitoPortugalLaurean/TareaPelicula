@@ -8,11 +8,11 @@ namespace Pelicula
     {
         //Campos
         private List<Actor> actores = new List<Actor>();
-        public string Título;
-        public int Año;
-        public string Director;
-        public string País;
-
+        public string Título {get; set;}
+        public int Año {get; set;}
+        public string Director{get; set;}
+        public string País{get; set;}
+        
         //Constructores
      
         //Métodos
@@ -47,7 +47,16 @@ namespace Pelicula
     {
         static void Main(string[] args)
         {
+            Pelicula p1 = new Pelicula();
+            p1.SetTitulo("Todo en Todas Partes al Mismo Tiempo");
+            p1.SetAño(2022);
+            
+            Pelicula p2 = new Pelicula();
+            p2.SetTitulo("Tár");
+            p2.SetAño(2023);
             Console.WriteLine("Hello");
-        }
+            Console.WriteLine("{0} ({1})", p1.GetTitulo(), p1.GetAño());
+
+        }    
     }
 }
