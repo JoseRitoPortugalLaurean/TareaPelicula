@@ -118,5 +118,18 @@ namespace Pelicula
             Console.WriteLine("Hello");
             Console.WriteLine("{0} ({1})", p1.GetTitulo(), p1.GetAño());
         }
+
+        class prueh
+        {
+            static void Main(string[] args)
+            {
+                Pelicula p1 = new Pelicula();
+                p1.SetTitulo("Todo en Todas Partes al Mismo Tiempo");
+                p1.SetAño(2022);
+                Pelicula p2 = new Pelicula();
+                Console.WriteLine("Hello");
+                Console.WriteLine("{0} ({1})", p1.GetTitulo(), p1.GetAño());
+            }
+        }
     }
 }
