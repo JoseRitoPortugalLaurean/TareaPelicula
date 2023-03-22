@@ -44,6 +44,17 @@ namespace Pelicula
         {
              Console.WriteLine($"{titulo} ({año})");
         }
+        public void ImprimeActores()
+        {
+            foreach (Actor a in actores)
+             {
+               Console.WriteLine(a);
+             }
+        }
+        public void AgregaActor(Actor actor)
+        {
+           actores.Add(actor);
+        }
 
 
     }
@@ -51,14 +62,45 @@ namespace Pelicula
     public class Actor
     {
         //Propiedades
+        private string Nombre;
+        private Int16 AñoActor; 
 
         //Constructores
-
+        public Actor(string Nombre, Int16 AñoActor)
+        {
+            this.Nombre = Nombre;
+            this.AñoActor = AñoActor;
+        }
 
         //Métodos 
-        public void Imprime()
+        public override string ToString(){
+            return $"{Nombre} ({AñoActor})";
+        }  
+        public Int16 GetAñoActor()
         {
-
+            return AñoActor;
+        }
+        public void SetAñoActor(Int16 a)
+        {
+            AñoActor = a;
+        }
+        public string GetNombre()
+        {
+            return Nombre;
+        }
+        public void SetNombre(string n)
+        {
+            Nombre = n;
+        }
+        public string nombre
+        { 
+            get {return Nombre;}
+            set {Nombre = value;}
+        }
+        public Int16 añoActor
+        { 
+            get {return AñoActor;}
+            set {AñoActor = value;}
         }
     }
 

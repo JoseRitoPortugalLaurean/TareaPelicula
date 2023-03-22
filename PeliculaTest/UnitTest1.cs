@@ -34,7 +34,6 @@ namespace PeliculaTest
         [Fact]
         public void ImprimePelicula()
         {
-            
             using (StringWriter s = new StringWriter())
             {
                 Console.SetOut(s);
@@ -49,7 +48,6 @@ namespace PeliculaTest
         [Fact]
         public void ImprimeActores()
         {
-
             Pelicula.Pelicula p1 = new Pelicula.Pelicula("La La Land", 2016);
             p1.AgregaActor(new Actor("Ryan Gosling", 1980));
             p1.AgregaActor(new Actor("Emma Stone", 1988));
