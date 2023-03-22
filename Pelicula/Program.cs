@@ -14,12 +14,18 @@ namespace Pelicula
         public string País{get; set;}
         
         //Constructores
-     
+        public Pelicula(string titulo, int año, string director, string pais)
+        {
+            this.Título = titulo;
+            this.Año = año;
+            this.Director = director;
+            this.País = pais;
+        }
         //Métodos
-     
+
         public void Imprime()
         {
-     //       Console.WriteLine($"{titulo} ({año})");
+             Console.WriteLine($"{Titulo} ({Año})");
 
         }
 
@@ -36,7 +42,7 @@ namespace Pelicula
         //Métodos 
         public void Imprime()
         {
-            Console.WriteLine($"{Nombre} ({Año})");
+            Console.WriteLine($"{Titulo} ({Año})");
         }
     }
 
@@ -50,13 +56,10 @@ namespace Pelicula
             Pelicula p1 = new Pelicula();
             p1.SetTitulo("Todo en Todas Partes al Mismo Tiempo");
             p1.SetAño(2022);
-            
             Pelicula p2 = new Pelicula();
-            p2.SetTitulo("Tár");
-            p2.SetAño(2023);
             Console.WriteLine("Hello");
             Console.WriteLine("{0} ({1})", p1.GetTitulo(), p1.GetAño());
 
-        }    
+        }
     }
 }
