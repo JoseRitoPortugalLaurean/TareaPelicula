@@ -8,25 +8,26 @@ namespace Pelicula
     {
         //Campos
         private List<Actor> actores = new List<Actor>();
-        public string Título {get; set;}
-        public int Año {get; set;}
-        public string Director{get; set;}
-        public string País{get; set;}
+        public string titulo;
+        public int año;
+        public string director;
+        public string país;
         
         //Constructores
-        public Pelicula(string titulo, int año, string director, string pais)
+        public Pelicula()
         {
-            this.Título = titulo;
-            this.Año = año;
-            this.Director = director;
-            this.País = pais;
+            
+        }
+        public Pelicula(string titulo, int año)
+        {
+            this.titulo = titulo;
+            this.año = año;
         }
         //Métodos
 
         public void Imprime()
         {
-             Console.WriteLine($"{Titulo} ({Año})");
-
+             Console.WriteLine($"{titulo} ({año})");
         }
 
 
@@ -42,7 +43,7 @@ namespace Pelicula
         //Métodos 
         public void Imprime()
         {
-            Console.WriteLine($"{Titulo} ({Año})");
+
         }
     }
 
